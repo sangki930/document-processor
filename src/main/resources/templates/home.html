@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: layout(~{::title}, ~{::section})}">
+<head>
+    <title>Home - Document Processor</title>
+</head>
+<body>
+    <section>
+        <div class="jumbotron bg-light p-5 rounded">
+            <h1 class="display-4">Document Processor with Spring AI</h1>
+            <p class="lead">Upload documents and get AI-powered analysis including summaries, keywords, sentiment analysis, and categorization.</p>
+            <hr class="my-4">
+            <p>Currently processing <span th:text="${documentCount}">0</span> documents in the system.</p>
+            <a class="btn btn-primary btn-lg" href="/documents/upload" role="button">Upload Document</a>
+            <a class="btn btn-secondary btn-lg" href="/documents" role="button">View Documents</a>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Document Summarization</h5>
+                        <p class="card-text">Get concise summaries of your documents, extracting the most important information.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Keyword Extraction</h5>
+                        <p class="card-text">Identify the most important keywords and phrases in your documents.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Sentiment Analysis</h5>
+                        <p class="card-text">Determine the emotional tone of your documents, from very positive to very negative.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Document Categorization</h5>
+                        <p class="card-text">Automatically categorize your documents into predefined categories.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Full-Text Search</h5>
+                        <p class="card-text">Search through all your documents to find specific information quickly.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Multiple File Formats</h5>
+                        <p class="card-text">Support for various document formats including PDF, DOCX, DOC, and TXT.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
